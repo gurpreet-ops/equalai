@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equal AI · Social Media Strategy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/[email protected]/dist/tabler-icons.min.css">
+<style>
+  :root {
+    --bg: #FAFAF7;
+    --surface: #FFFFFF;
+    --surface-2: #F1EFE8;
+    --surface-3: #E8E5DD;
+    --text-primary: #1A2027;
+    --text-secondary: #5F5E5A;
+    --text-tertiary: #9C9B96;
+    --border-tertiary: rgba(26, 32, 39, 0.10);
+    --border-secondary: rgba(26, 32, 39, 0.18);
+    --equal-dark: #0a1f10;
+    --equal-lime: #A8F02C;
+    --equal-green-deep: #00B140;
+    --teal-50: #E1F5EE;
+    --teal-100: #CCEFE2;
+    --teal-200: #9FE1CB;
+    --teal-400: #5DCAA5;
+    --teal-600: #1D9E75;
+    --teal-700: #0F6E56;
+    --teal-800: #085041;
+    --teal-900: #04342C;
+    --amber-50: #FAEEDA;
+    --amber-100: #F5DCB0;
+    --amber-200: #FAC775;
+    --amber-700: #854F0B;
+    --amber-800: #633806;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 64px 40px 80px;
+  }
+
+  .doc-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 56px;
+    border-bottom: 0.5px solid var(--border-tertiary);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+  }
+  .doc-meta .doc-brand { color: var(--text-primary); font-weight: 500; }
+
+  .part-header {
+    padding: 32px 0;
+    margin-bottom: 32px;
+    border-top: 2px solid var(--equal-dark);
+  }
+  .part-header:first-of-type { border-top: 0; padding-top: 0; }
+
+  .label {
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-secondary); margin-bottom: 6px; font-weight: 500;
+  }
+
+  .section { margin-bottom: 56px; }
+
+  .title {
+    font-size: 28px; font-weight: 500; margin: 0 0 12px;
+    letter-spacing: -0.02em; line-height: 1.2; color: var(--text-primary);
+  }
+
+  .lede {
+    font-size: 15px; color: var(--text-secondary); margin: 0 0 24px;
+    line-height: 1.65; max-width: 640px;
+  }
+
+  .divider {
+    height: 0.5px; background: var(--border-tertiary); margin: 56px 0;
+  }
+
+  /* ============ 7 QUESTIONS ============ */
+  .qrow {
+    display: grid; grid-template-columns: 36px 1fr;
+    gap: 16px; padding: 16px 0;
+    border-bottom: 0.5px solid var(--border-tertiary);
+  }
+  .qrow:last-child { border-bottom: 0; }
+  .qnum {
+    font-size: 12px; color: var(--text-tertiary); font-weight: 500;
+    font-variant-numeric: tabular-nums; padding-top: 2px; letter-spacing: 0.04em;
+  }
+  .qq { font-size: 15px; font-weight: 500; line-height: 1.45; color: var(--text-primary); }
+  .qref { font-size: 12px; color: var(--text-tertiary); margin-top: 5px; }
+
+  /* ============ ASSUMPTION BLOCK ============ */
+  .assumption-block {
+    background: var(--surface-2); border-radius: 12px; padding: 28px 32px;
+  }
+  .assumption-tag {
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-secondary); margin-bottom: 16px; font-weight: 500;
+  }
+  .assumption-quote {
+    font-size: 20px; line-height: 1.45; font-weight: 400;
+    color: var(--text-primary); margin-bottom: 20px; letter-spacing: -0.01em;
+  }
+  .assumption-quote strong { font-weight: 500; }
+  .assumption-list { font-size: 14px; line-height: 1.8; color: var(--text-secondary); }
+  .assumption-list .item { padding: 3px 0; }
+  .assumption-list .item::before { content: "·  "; color: var(--text-tertiary); }
+
+  /* ============ DATA VIS (DARK GREEN) ============ */
+  .data-vis { background: var(--equal-dark); border-radius: 14px; padding: 36px; }
+  .data-hero {
+    color: var(--equal-lime); font-size: 64px; font-weight: 500;
+    letter-spacing: -0.03em; line-height: 1; margin-bottom: 10px;
+  }
+  .data-hero-lbl {
+    color: rgba(168, 240, 44, 0.7); font-size: 12px;
+    letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 28px; font-weight: 500;
+  }
+  .data-bar-wrap { margin-bottom: 20px; }
+  .data-bar-track {
+    height: 14px; background: rgba(255, 255, 255, 0.08);
+    border-radius: 7px; position: relative; overflow: hidden;
+  }
+  .data-bar-fill {
+    height: 100%; background: rgba(168, 240, 44, 0.20);
+    width: 100%; border-radius: 7px; position: relative;
+  }
+  .data-bar-sliver {
+    position: absolute; left: 0; top: 0; height: 100%;
+    width: 0.15%; min-width: 4px; background: var(--equal-lime); border-radius: 7px;
+  }
+  .data-bar-legend {
+    display: flex; justify-content: space-between;
+    margin-top: 12px; font-size: 12px;
+  }
+  .data-bar-left { color: var(--equal-lime); font-weight: 500; }
+  .data-bar-right { color: rgba(255, 255, 255, 0.7); }
+  .data-numbers {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+    padding-top: 24px; border-top: 0.5px solid rgba(168, 240, 44, 0.2);
+  }
+  .data-num {
+    color: #ffffff; font-size: 26px; font-weight: 500;
+    letter-spacing: -0.02em; line-height: 1.1; font-variant-numeric: tabular-nums;
+  }
+  .data-num-lbl {
+    color: rgba(168, 240, 44, 0.6); font-size: 11px;
+    letter-spacing: 0.08em; text-transform: uppercase; margin-top: 8px; font-weight: 500;
+  }
+  .data-callout {
+    color: #ffffff; font-size: 15px; font-weight: 400; line-height: 1.6;
+    padding-top: 24px; margin-top: 24px;
+    border-top: 0.5px solid rgba(168, 240, 44, 0.2);
+  }
+  .data-callout strong { color: var(--equal-lime); font-weight: 500; }
+
+  /* ============ QUADRANT ============ */
+  .quad-container { position: relative; padding: 0 0 0 56px; margin: 8px 0; }
+  .quad-y-label {
+    position: absolute; left: -16px; top: 50%;
+    transform: rotate(-90deg); transform-origin: center;
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-secondary); white-space: nowrap; font-weight: 500;
+  }
+  .quad-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    border: 0.5px solid var(--border-secondary); border-radius: 10px;
+    overflow: hidden; background: var(--surface-2);
+  }
+  .quad-cell {
+    padding: 22px; min-height: 200px; display: flex; flex-direction: column;
+    border-right: 0.5px solid var(--border-tertiary);
+    border-bottom: 0.5px solid var(--border-tertiary);
+    background: var(--surface); position: relative;
+  }
+  .quad-cell:nth-child(2) { border-right: 0; }
+  .quad-cell:nth-child(3), .quad-cell:nth-child(4) { border-bottom: 0; }
+  .quad-cell:nth-child(4) { border-right: 0; }
+  .quad-cell.featured { background: var(--teal-50); }
+  .quad-label {
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-secondary); margin-bottom: 10px; font-weight: 500;
+  }
+  .quad-cell.featured .quad-label { color: var(--teal-700); }
+  .quad-headline {
+    font-size: 15px; font-weight: 500; margin-bottom: 12px;
+    line-height: 1.4; color: var(--text-primary);
+  }
+  .quad-cell.featured .quad-headline { color: var(--teal-900); }
+  .quad-brands { font-size: 13px; color: var(--text-secondary); line-height: 1.55; margin-bottom: 10px; }
+  .quad-cell.featured .quad-brands { color: var(--teal-700); font-weight: 500; }
+  .quad-rhythm {
+    font-size: 11px; color: var(--text-tertiary);
+    margin-top: auto; padding-top: 10px; line-height: 1.45;
+  }
+  .quad-cell.featured .quad-rhythm { color: var(--teal-700); opacity: 0.85; }
+  .equal-pin {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--equal-dark); color: var(--equal-lime);
+    font-size: 10px; padding: 5px 10px; border-radius: 999px;
+    font-weight: 500; letter-spacing: 0.04em; margin-bottom: 12px; width: fit-content;
+  }
+  .equal-pin-dot {
+    width: 6px; height: 6px; border-radius: 50%; background: var(--equal-lime);
+  }
+  .quad-xaxis { display: grid; grid-template-columns: 1fr 1fr; margin-top: 14px; }
+  .quad-x-lbl {
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-secondary); text-align: center; padding: 4px; font-weight: 500;
+  }
+  .quad-x-lbl.right-axis { color: var(--text-primary); }
+
+  /* ============ INSIGHT ============ */
+  .insight {
+    background: var(--surface-2); border-left: 3px solid var(--teal-600);
+    padding: 18px 22px; border-radius: 0 6px 6px 0; margin-top: 20px;
+  }
+  .insight-tag {
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--teal-700); font-weight: 500; margin-bottom: 8px;
+  }
+  .insight-text { font-size: 14px; line-height: 1.65; color: var(--text-primary); }
+
+  /* ============ LOCKING INSIGHT (DARK GREEN BLOCK) ============ */
+  .asymmetry, .lock-insight {
+    background: var(--equal-dark); border-radius: 14px;
+    padding: 32px 36px; margin-top: 20px;
+  }
+  .asym-tag, .lock-tag {
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(168, 240, 44, 0.7); font-weight: 500; margin-bottom: 16px;
+  }
+  .asym-quote, .lock-quote {
+    color: #ffffff; font-size: 24px; font-weight: 500; line-height: 1.4;
+    letter-spacing: -0.02em; margin-bottom: 20px;
+  }
+  .asym-quote .accent, .lock-quote .accent { color: var(--equal-lime); }
+  .asym-body, .lock-body {
+    color: rgba(255, 255, 255, 0.78); font-size: 14px; line-height: 1.7;
+  }
+  .asym-body strong, .lock-body strong { color: #ffffff; font-weight: 500; }
+
+  /* ============ ROLE OF SOCIAL — FUNNEL VISUAL ============ */
+  .role-funnel {
+    background: var(--surface); border: 0.5px solid var(--border-tertiary);
+    border-radius: 14px; padding: 32px; margin-top: 8px;
+  }
+  .role-stage {
+    display: grid; grid-template-columns: 110px 1fr; gap: 28px;
+    padding: 20px 0; position: relative;
+  }
+  .role-stage + .role-stage { border-top: 0.5px dashed var(--border-tertiary); }
+  .role-stage-num {
+    display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
+  }
+  .role-stage-tag {
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    font-weight: 500; padding: 4px 10px; border-radius: 4px;
+    align-self: flex-start;
+  }
+  .role-stage.primary .role-stage-tag { color: var(--teal-900); background: var(--teal-100); }
+  .role-stage.secondary .role-stage-tag { color: var(--amber-800); background: var(--amber-50); }
+  .role-stage.outcome .role-stage-tag { color: var(--text-secondary); background: var(--surface-2); }
+  .role-stage-icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+  }
+  .role-stage.primary .role-stage-icon { background: var(--teal-50); color: var(--teal-700); }
+  .role-stage.secondary .role-stage-icon { background: var(--amber-50); color: var(--amber-700); }
+  .role-stage.outcome .role-stage-icon { background: var(--surface-2); color: var(--text-secondary); }
+  .role-stage-content { padding-top: 2px; }
+  .role-stage-headline {
+    font-size: 16px; font-weight: 500; line-height: 1.4;
+    margin-bottom: 6px; color: var(--text-primary); letter-spacing: -0.01em;
+  }
+  .role-stage-because {
+    font-size: 13px; color: var(--text-secondary); line-height: 1.6;
+  }
+
+  .reasoning-mini {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 20px;
+  }
+  .reasoning-card {
+    background: var(--surface-2); border-radius: 10px; padding: 18px 20px;
+  }
+  .reasoning-card-q {
+    font-size: 12px; font-weight: 500; color: var(--text-primary);
+    margin-bottom: 8px; line-height: 1.4;
+  }
+  .reasoning-card-a {
+    font-size: 12px; color: var(--text-secondary); line-height: 1.6;
+  }
+
+  /* ============ AUDIENCE VISUAL ============ */
+  .audience-vis {
+    background: var(--surface); border: 0.5px solid var(--border-tertiary);
+    border-radius: 14px; padding: 36px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center;
+  }
+  .audience-circles {
+    position: relative; height: 260px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .circle-outer {
+    width: 240px; height: 240px; border-radius: 50%;
+    background: var(--surface-2); display: flex; align-items: flex-end;
+    justify-content: center; padding-bottom: 24px; position: relative;
+    text-align: center;
+  }
+  .circle-outer::before {
+    content: ""; position: absolute; top: 14px; left: 14px;
+    width: calc(100% - 28px); height: calc(100% - 28px);
+    border: 1px dashed var(--border-secondary); border-radius: 50%;
+  }
+  .circle-inner {
+    width: 130px; height: 130px; border-radius: 50%;
+    background: var(--teal-100); border: 1.5px solid var(--teal-600);
+    position: absolute; top: 28px; left: 28px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 14px; text-align: center;
+  }
+  .circle-num {
+    font-size: 22px; font-weight: 500; line-height: 1;
+    margin-bottom: 5px; letter-spacing: -0.01em;
+  }
+  .circle-outer > div .circle-num { color: var(--text-secondary); font-size: 18px; }
+  .circle-inner .circle-num { color: var(--teal-900); }
+  .circle-lbl {
+    font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+    line-height: 1.3; font-weight: 500;
+  }
+  .circle-outer > div .circle-lbl { color: var(--text-secondary); }
+  .circle-inner .circle-lbl { color: var(--teal-800); }
+  .audience-side h3 {
+    font-size: 14px; font-weight: 500; margin-bottom: 6px;
+    color: var(--text-primary); letter-spacing: -0.01em;
+  }
+  .audience-side p {
+    font-size: 13px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 18px;
+  }
+  .audience-side .principle {
+    background: var(--teal-50); border-left: 3px solid var(--teal-600);
+    border-radius: 0 6px 6px 0; padding: 14px 16px;
+    font-size: 13px; color: var(--teal-900); line-height: 1.6; margin-top: 12px;
+  }
+  .audience-side .principle strong { font-weight: 500; }
+
+  /* ============ TIERED ARCHITECTURE ============ */
+  .stack-architecture {
+    background: var(--surface); border: 0.5px solid var(--border-tertiary);
+    border-radius: 14px; padding: 28px; margin-top: 8px;
+  }
+  .tier-band {
+    margin-bottom: 14px; border-radius: 10px;
+    padding: 18px 20px;
+  }
+  .tier-band.tier-1 {
+    background: var(--teal-50);
+    border: 1px solid var(--teal-200);
+  }
+  .tier-band.tier-2 {
+    background: var(--amber-50);
+    border: 1px solid var(--amber-100);
+  }
+  .tier-band.tier-3 {
+    background: var(--surface-2);
+    border: 1px solid var(--border-tertiary);
+  }
+  .tier-band:last-child { margin-bottom: 0; }
+  .tier-band-header {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+  }
+  .tier-band-num {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 4px;
+  }
+  .tier-band.tier-1 .tier-band-num { color: var(--teal-900); background: var(--teal-100); }
+  .tier-band.tier-2 .tier-band-num { color: var(--amber-800); background: var(--amber-100); }
+  .tier-band.tier-3 .tier-band-num { color: var(--text-secondary); background: var(--surface); }
+  .tier-band-title {
+    font-size: 14px; font-weight: 500; color: var(--text-primary);
+    letter-spacing: -0.01em;
+  }
+  .tier-band-summary {
+    font-size: 11px; color: var(--text-secondary); margin-left: auto; font-weight: 500;
+  }
+  .tier-band.tier-1 .tier-band-summary { color: var(--teal-700); }
+  .tier-band.tier-2 .tier-band-summary { color: var(--amber-700); }
+  .channel-tiles {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
+  }
+  .channel-tile {
+    background: var(--surface); border-radius: 8px;
+    padding: 14px 16px; display: grid;
+    grid-template-columns: 28px 1fr; gap: 12px; align-items: center;
+  }
+  .channel-tile-icon {
+    width: 28px; height: 28px; border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+  }
+  .tier-band.tier-1 .channel-tile-icon { background: var(--teal-100); color: var(--teal-800); }
+  .tier-band.tier-2 .channel-tile-icon { background: var(--amber-100); color: var(--amber-800); }
+  .tier-band.tier-3 .channel-tile-icon { background: var(--surface-3); color: var(--text-secondary); }
+  .channel-tile-text {
+    display: flex; flex-direction: column; gap: 1px;
+  }
+  .channel-tile-name {
+    font-size: 13px; font-weight: 500; color: var(--text-primary);
+    letter-spacing: -0.01em;
+  }
+  .channel-tile-role {
+    font-size: 11px; color: var(--text-secondary); line-height: 1.4;
+  }
+  .skip-band {
+    margin-top: 18px; padding: 14px 18px;
+    background: var(--surface-2); border-radius: 8px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .skip-band-tag {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-secondary); padding: 4px 10px;
+    background: var(--surface); border-radius: 4px; white-space: nowrap;
+  }
+  .skip-band-items {
+    font-size: 12px; color: var(--text-secondary); line-height: 1.55;
+  }
+
+  /* ============ OWNERSHIP VISUAL ============ */
+  .ownership-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    margin-top: 8px;
+  }
+  .ownership-card {
+    background: var(--surface); border: 0.5px solid var(--border-tertiary);
+    border-radius: 10px; padding: 16px 18px;
+  }
+  .ownership-card-channel {
+    font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-tertiary); margin-bottom: 8px; font-weight: 500;
+  }
+  .ownership-card-owns {
+    font-size: 14px; font-weight: 500; color: var(--text-primary);
+    line-height: 1.4; letter-spacing: -0.01em; margin-bottom: 4px;
+  }
+  .ownership-card-detail {
+    font-size: 12px; color: var(--text-secondary); line-height: 1.55;
+  }
+
+  /* ============ PILLAR OVERVIEW ============ */
+  .pillar-overview {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    margin-top: 8px;
+  }
+  .pillar-overview-card {
+    background: var(--surface); border: 0.5px solid var(--border-tertiary);
+    border-radius: 10px; padding: 16px 18px; position: relative;
+    border-top: 3px solid;
+  }
+  .pillar-overview-card.p-life { border-top-color: #5DCAA5; }
+  .pillar-overview-card.p-argument { border-top-color: #7F77DD; }
+  .pillar-overview-card.p-action { border-top-color: #378ADD; }
+  .pillar-overview-card.p-features { border-top-color: #EF9F27; }
+  .pillar-overview-card.p-stats { border-top-color: #97C459; }
+  .pillar-overview-card.p-founder { border-top-color: #888780; }
+  .pillar-overview-num {
+    font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-tertiary); margin-bottom: 6px; font-weight: 500;
+  }
+  .pillar-overview-name {
+    font-size: 14px; font-weight: 500; color: var(--text-primary);
+    margin-bottom: 6px; letter-spacing: -0.01em;
+  }
+  .pillar-overview-def {
+    font-size: 12px; color: var(--text-secondary); line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .pillar-overview-example {
+    font-size: 11px; color: var(--text-primary); line-height: 1.5;
+    margin-bottom: 12px; padding: 8px 10px;
+    background: var(--surface-2); border-radius: 6px;
+    font-style: italic;
+  }
+  .pillar-overview-example em {
+    font-style: normal; font-weight: 500;
+    display: block; font-size: 10px;
+    color: var(--text-tertiary);
+    letter-spacing: 0.06em; text-transform: uppercase;
+    margin-bottom: 3px; font-style: normal;
+  }
+  .pillar-overview-freq {
+    font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--text-tertiary); font-weight: 500;
+  }
+
+  /* ============ ENGINES VISUAL ============ */
+  .engines-vis {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;
+    margin-top: 8px;
+  }
+  .engine-card {
+    background: var(--surface); border: 0.5px solid var(--border-tertiary);
+    border-radius: 12px; padding: 22px;
+  }
+  .engine-card.show { background: var(--teal-50); border-color: var(--teal-200); }
+  .engine-card.tell { background: #EEEDFE; border-color: #CECBF6; }
+  .engine-card.voice { background: var(--surface-2); border-color: var(--border-tertiary); }
+  .engine-tag {
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    font-weight: 500; margin-bottom: 10px;
+  }
+  .engine-card.show .engine-tag { color: var(--teal-700); }
+  .engine-card.tell .engine-tag { color: #3C3489; }
+  .engine-card.voice .engine-tag { color: var(--text-secondary); }
+  .engine-headline {
+    font-size: 14px; font-weight: 500; margin-bottom: 10px;
+    line-height: 1.4; color: var(--text-primary);
+  }
+  .engine-pillars {
+    font-size: 12px; color: var(--text-secondary); line-height: 1.55;
+    margin-bottom: 10px;
+  }
+  .engine-pillars strong { color: var(--text-primary); font-weight: 500; }
+  .engine-job {
+    font-size: 12px; color: var(--text-secondary); line-height: 1.6;
+    padding-top: 10px; border-top: 0.5px solid var(--border-tertiary);
+  }
+
+  /* ============ PILLAR DEEP DIVE CARDS ============ */
+  .pillar-deep {
+    background: var(--surface); border: 0.5px solid var(--border-tertiary);
+    border-radius: 14px; padding: 28px 32px; margin-bottom: 14px;
+    border-left: 4px solid;
+  }
+  .pillar-deep.p-life { border-left-color: #5DCAA5; }
+  .pillar-deep.p-argument { border-left-color: #7F77DD; }
+  .pillar-deep.p-action { border-left-color: #378ADD; }
+  .pillar-deep.p-features { border-left-color: #EF9F27; }
+  .pillar-deep.p-stats { border-left-color: #97C459; }
+  .pillar-deep.p-founder { border-left-color: #888780; }
+  .pillar-deep-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 8px; flex-wrap: wrap; gap: 12px;
+  }
+  .pillar-deep-name {
+    font-size: 20px; font-weight: 500; color: var(--text-primary);
+    letter-spacing: -0.015em;
+  }
+  .pillar-deep-freq {
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    font-weight: 500; padding: 4px 10px; border-radius: 4px;
+    color: var(--text-secondary); background: var(--surface-2);
+  }
+  .pillar-deep-def {
+    font-size: 14px; color: var(--text-secondary); line-height: 1.6;
+    margin-bottom: 20px; max-width: 580px;
+  }
+  .pillar-deep-section {
+    margin-top: 18px;
+  }
+  .pillar-deep-section-label {
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-tertiary); margin-bottom: 10px; font-weight: 500;
+  }
+  .pillar-deep-job {
+    font-size: 13px; color: var(--text-primary); line-height: 1.6;
+  }
+  .format-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
+  }
+  .format-chip {
+    background: var(--surface-2); border-radius: 8px;
+    padding: 10px 12px;
+  }
+  .format-chip-name {
+    font-size: 12px; font-weight: 500; color: var(--text-primary);
+    margin-bottom: 2px;
+  }
+  .format-chip-detail {
+    font-size: 11px; color: var(--text-secondary); line-height: 1.45;
+  }
+  .examples-list {
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .example-row {
+    background: var(--surface-2); border-radius: 8px;
+    padding: 12px 14px; font-size: 13px;
+    color: var(--text-primary); line-height: 1.5;
+    border-left: 2px solid var(--border-tertiary);
+  }
+  .example-row em {
+    color: var(--text-secondary); font-size: 11px; font-style: normal;
+    letter-spacing: 0.04em; text-transform: uppercase; font-weight: 500;
+    display: block; margin-bottom: 4px;
+  }
+  .pillar-deep-meta {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    margin-top: 18px; padding-top: 16px;
+    border-top: 0.5px solid var(--border-tertiary);
+  }
+  .meta-item {
+    font-size: 12px; color: var(--text-secondary);
+  }
+  .meta-item strong {
+    display: block; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-tertiary); margin-bottom: 4px; font-weight: 500;
+  }
+
+  /* ============ FEED MOSAIC ============ */
+  .feed-mosaic-wrap {
+    background: var(--surface); border: 0.5px solid var(--border-tertiary);
+    border-radius: 14px; padding: 28px;
+  }
+  .feed-mosaic {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;
+    margin-bottom: 20px;
+  }
+  .feed-tile {
+    aspect-ratio: 1; border-radius: 6px; padding: 12px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative;
+  }
+  .feed-tile.p-life { background: var(--teal-50); }
+  .feed-tile.p-argument { background: #EEEDFE; }
+  .feed-tile.p-action { background: #E6F1FB; }
+  .feed-tile.p-features { background: #FAEEDA; }
+  .feed-tile.p-stats { background: #EAF3DE; }
+  .feed-tile.p-founder { background: var(--surface-2); }
+  .feed-tile-label {
+    font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase;
+    font-weight: 500;
+  }
+  .feed-tile.p-life .feed-tile-label { color: #04342C; }
+  .feed-tile.p-argument .feed-tile-label { color: #3C3489; }
+  .feed-tile.p-action .feed-tile-label { color: #0C447C; }
+  .feed-tile.p-features .feed-tile-label { color: #854F0B; }
+  .feed-tile.p-stats .feed-tile-label { color: #27500A; }
+  .feed-tile.p-founder .feed-tile-label { color: var(--text-secondary); }
+  .feed-tile-content {
+    font-size: 11px; line-height: 1.35; font-weight: 500;
+  }
+  .feed-tile.p-life .feed-tile-content { color: #04342C; }
+  .feed-tile.p-argument .feed-tile-content { color: #3C3489; }
+  .feed-tile.p-action .feed-tile-content { color: #0C447C; }
+  .feed-tile.p-features .feed-tile-content { color: #854F0B; }
+  .feed-tile.p-stats .feed-tile-content { color: #27500A; }
+  .feed-tile.p-founder .feed-tile-content { color: var(--text-primary); }
+  .feed-legend {
+    display: flex; flex-wrap: wrap; gap: 12px; padding-top: 16px;
+    border-top: 0.5px solid var(--border-tertiary);
+  }
+  .feed-legend-item {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 11px; color: var(--text-secondary);
+  }
+  .feed-legend-swatch {
+    width: 10px; height: 10px; border-radius: 3px;
+  }
+
+  /* ============ PHASE ARC ============ */
+  .phase-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+    margin-top: 8px;
+  }
+  .phase-card {
+    background: var(--surface); border: 0.5px solid var(--border-tertiary);
+    border-radius: 14px; padding: 24px; border-top: 4px solid;
+    display: flex; flex-direction: column;
+  }
+  .phase-card.phase-1 { border-top-color: #5DCAA5; }
+  .phase-card.phase-2 { border-top-color: #FAC775; }
+  .phase-card.phase-3 { border-top-color: #A8F02C; }
+  .phase-num {
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-tertiary); font-weight: 500; margin-bottom: 6px;
+  }
+  .phase-name {
+    font-size: 18px; font-weight: 500; color: var(--text-primary);
+    letter-spacing: -0.015em; margin-bottom: 6px;
+  }
+  .phase-dates {
+    font-size: 11px; color: var(--text-secondary); font-weight: 500;
+    margin-bottom: 16px; padding-bottom: 14px;
+    border-bottom: 0.5px solid var(--border-tertiary);
+  }
+  .phase-job-label {
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-tertiary); margin-bottom: 6px; font-weight: 500;
+  }
+  .phase-job {
+    font-size: 13px; color: var(--text-primary); line-height: 1.55;
+    margin-bottom: 18px;
+  }
+  .phase-section { margin-bottom: 14px; }
+  .phase-section-label {
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-tertiary); margin-bottom: 8px; font-weight: 500;
+  }
+  .phase-list {
+    font-size: 12px; color: var(--text-secondary); line-height: 1.65;
+  }
+  .phase-list .item { padding: 2px 0; }
+  .phase-list .item::before { content: "·  "; color: var(--text-tertiary); }
+  .phase-out .phase-list { color: #993C1D; }
+  .phase-out .phase-list .item::before { color: #993C1D; }
+  .phase-milestone {
+    margin-top: auto; padding-top: 14px;
+    border-top: 0.5px solid var(--border-tertiary);
+  }
+  .phase-milestone-label {
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-tertiary); margin-bottom: 6px; font-weight: 500;
+  }
+  .phase-milestone-text {
+    font-size: 12px; font-weight: 500; color: var(--text-primary); line-height: 1.5;
+  }
+
+  /* Pillar weight visualization */
+  .weights-wrap {
+    background: var(--surface); border: 0.5px solid var(--border-tertiary);
+    border-radius: 12px; padding: 24px; margin-top: 8px;
+  }
+  .weights-row {
+    display: grid; grid-template-columns: 130px 1fr;
+    align-items: center; gap: 16px; padding: 8px 0;
+    border-bottom: 0.5px dashed var(--border-tertiary);
+  }
+  .weights-row:last-child { border-bottom: 0; }
+  .weights-pillar {
+    font-size: 12px; font-weight: 500; color: var(--text-primary);
+  }
+  .weights-bars {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;
+  }
+  .weight-bar {
+    height: 26px; border-radius: 5px; display: flex; align-items: center;
+    justify-content: flex-end; padding: 0 8px;
+    font-size: 11px; font-weight: 500;
+  }
+  .weight-bar.w-0 { background: var(--surface-2); color: var(--text-tertiary); }
+  .weight-bar.w-low { background: var(--teal-50); color: var(--teal-700); }
+  .weight-bar.w-med { background: var(--teal-100); color: var(--teal-800); }
+  .weight-bar.w-high { background: var(--teal-200); color: var(--teal-900); }
+  .weight-bar.w-peak { background: var(--teal-400); color: var(--teal-900); }
+  .weights-header {
+    display: grid; grid-template-columns: 130px 1fr;
+    gap: 16px; margin-bottom: 14px; padding-bottom: 10px;
+    border-bottom: 0.5px solid var(--border-tertiary);
+  }
+  .weights-header-spacer { }
+  .weights-header-phases {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;
+  }
+  .weights-header-phase {
+    font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-secondary); text-align: center; font-weight: 500;
+  }
+
+  /* ============ CHANNEL CONTENT IDEAS ============ */
+  .channel-block {
+    background: var(--surface); border: 0.5px solid var(--border-tertiary);
+    border-radius: 14px; padding: 28px 32px; margin-bottom: 18px;
+    border-left: 4px solid;
+  }
+  .channel-block.c-instagram { border-left-color: #D85A30; }
+  .channel-block.c-linkedin-equal { border-left-color: #185FA5; }
+  .channel-block.c-linkedin-keshav { border-left-color: #378ADD; }
+  .channel-block.c-twitter { border-left-color: #1A2027; }
+  .channel-block-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 8px; flex-wrap: wrap; gap: 12px;
+  }
+  .channel-block-name {
+    font-size: 20px; font-weight: 500; color: var(--text-primary);
+    letter-spacing: -0.015em;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .channel-block-icon {
+    font-size: 22px; color: var(--text-secondary);
+  }
+  .channel-block.c-instagram .channel-block-icon { color: #D85A30; }
+  .channel-block.c-linkedin-equal .channel-block-icon { color: #185FA5; }
+  .channel-block.c-linkedin-keshav .channel-block-icon { color: #378ADD; }
+  .channel-block.c-twitter .channel-block-icon { color: #1A2027; }
+  .channel-block-tag {
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    font-weight: 500; padding: 4px 10px; border-radius: 4px;
+    color: var(--text-secondary); background: var(--surface-2);
+  }
+  .channel-block-lede {
+    font-size: 13px; color: var(--text-secondary); line-height: 1.6;
+    margin-bottom: 20px; max-width: 600px;
+  }
+  .idea-list {
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .idea-row {
+    background: var(--surface-2); border-radius: 8px;
+    padding: 14px 16px;
+    display: grid; grid-template-columns: 22px 1fr;
+    gap: 12px; align-items: start;
+  }
+  .idea-num {
+    font-size: 11px; color: var(--text-tertiary);
+    font-weight: 500; font-variant-numeric: tabular-nums;
+    padding-top: 2px;
+  }
+  .idea-content {
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .idea-pillar {
+    font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-tertiary); font-weight: 500;
+  }
+  .idea-title {
+    font-size: 13px; font-weight: 500; color: var(--text-primary);
+    line-height: 1.5; letter-spacing: -0.005em;
+  }
+  .idea-detail {
+    font-size: 12px; color: var(--text-secondary); line-height: 1.55;
+  }
+
+  /* ============ CLOSER ============ */
+  .closer {
+    padding: 24px 0 0;
+    border-top: 0.5px solid var(--border-tertiary);
+    margin-top: 56px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .closer-text, .closer-link {
+    font-size: 12px; color: var(--text-secondary); letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 640px) {
+    .page { padding: 32px 20px 48px; }
+    .title { font-size: 22px; }
+    .lede { font-size: 14px; }
+    .data-hero { font-size: 48px; }
+    .asym-quote, .lock-quote { font-size: 19px; }
+    .quad-grid { grid-template-columns: 1fr; }
+    .quad-cell { border-right: 0; }
+    .data-numbers { grid-template-columns: 1fr; gap: 20px; }
+    .data-vis, .asymmetry, .lock-insight { padding: 24px; }
+    .role-funnel { padding: 22px; }
+    .role-stage { grid-template-columns: 1fr; gap: 12px; }
+    .reasoning-mini { grid-template-columns: 1fr; }
+    .audience-vis { grid-template-columns: 1fr; gap: 28px; padding: 24px; }
+    .audience-circles { height: 220px; }
+    .stack-architecture { padding: 20px; }
+    .channel-tiles { grid-template-columns: 1fr; }
+    .ownership-grid { grid-template-columns: 1fr; }
+    .pillar-overview { grid-template-columns: 1fr; }
+    .engines-vis { grid-template-columns: 1fr; }
+    .pillar-deep { padding: 22px; }
+    .format-grid { grid-template-columns: 1fr; }
+    .pillar-deep-meta { grid-template-columns: 1fr; gap: 12px; }
+    .feed-mosaic-wrap { padding: 20px; }
+    .feed-mosaic { grid-template-columns: repeat(2, 1fr); }
+    .phase-grid { grid-template-columns: 1fr; }
+    .phase-card { padding: 20px; }
+    .weights-wrap { padding: 18px; }
+    .weights-row { grid-template-columns: 1fr; gap: 8px; }
+    .weights-header { grid-template-columns: 1fr; }
+    .weights-header-spacer { display: none; }
+    .channel-block { padding: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="doc-meta">
+    <span class="doc-brand">Equal AI</span>
+    <span>Social Strategy · v1.0 · June 2026</span>
+  </div>
+
+  <!-- =========================== PART 1 =========================== -->
+  <div class="part-header">
+    <div class="label">Part 1 of 8 — Foundation</div>
+    <h1 class="title" style="margin-top: 4px;">How we approached the strategy</h1>
+    <p class="lede">Before deciding what to post, we worked through seven questions in order. Each answer constrained the next. What follows is how we got from "we have a content engine" to "we're rebuilding the strategy."</p>
+  </div>
+
+  <div class="section">
+    <div class="label">The framework — 7 questions we worked through</div>
+    <p class="lede" style="margin-top: 8px;">Each question is answered in depth in the part of this document that follows. Part 1 introduces the method. Parts 2–8 work through the answers.</p>
+    <div style="margin-top: 20px;">
+      <div class="qrow"><div class="qnum">01</div><div><div class="qq">Why are we on social media at all?</div><div class="qref">Answered in Part 2 — Channel Priority Stack</div></div></div>
+      <div class="qrow"><div class="qnum">02</div><div><div class="qq">Who is the page actually for?</div><div class="qref">Answered in Part 2 — Channel Priority Stack</div></div></div>
+      <div class="qrow"><div class="qnum">03</div><div><div class="qq">What job does the page do in our funnel?</div><div class="qref">Answered in Part 2 — Channel Priority Stack</div></div></div>
+      <div class="qrow"><div class="qnum">04</div><div><div class="qq">What is the single brand line that anchors everything?</div><div class="qref">Answered in Part 3 — The Master Brand Line</div></div></div>
+      <div class="qrow"><div class="qnum">05</div><div><div class="qq">What do we say? (positioning + pillars)</div><div class="qref">Answered in Part 4 — The Six Content Pillars</div></div></div>
+      <div class="qrow"><div class="qnum">06</div><div><div class="qq">How do we say it? (formats, cadence, arc)</div><div class="qref">Answered in Parts 5–7 — The 3-Phase Arc and calendars</div></div></div>
+      <div class="qrow"><div class="qnum">07</div><div><div class="qq">How do we measure if it's working?</div><div class="qref">Answered in Part 8 — Measurement</div></div></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="label">What we believed going in</div>
+    <h2 class="title">Our initial assumption</h2>
+    <p class="lede">We were operating on the same instinct most consumer brands run on — that Instagram drives growth, that more posts means more reach, and that volume is how a brand gets known. None of these assumptions had been tested against our own data.</p>
+
+    <div class="assumption-block">
+      <div class="assumption-tag">The working hypothesis</div>
+      <div class="assumption-quote">Post more, reach more, install more. <strong>Volume on Instagram is how a brand grows.</strong></div>
+      <div class="assumption-list">
+        <div class="item">7+ posts per week was the assumed cadence</div>
+        <div class="item">Mass-market memes were included to chase reach</div>
+        <div class="item">Followers were the success metric</div>
+        <div class="item">Multiple voices ran simultaneously without conflict in our minds</div>
+        <div class="item">The 113K follower base was treated as proof the strategy was working</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="label">The data that forced the pivot</div>
+    <h2 class="title">3 million installs. 4,500 from Instagram.</h2>
+    <p class="lede">Before redesigning anything, we pulled the actual numbers. The bar below shows total installs — find the green sliver on the left. That's Instagram's contribution.</p>
+
+    <div class="data-vis">
+      <div class="data-hero">0.15%</div>
+      <div class="data-hero-lbl">Instagram's share of total installs</div>
+      <div class="data-bar-wrap">
+        <div class="data-bar-track">
+          <div class="data-bar-fill">
+            <div class="data-bar-sliver"></div>
+          </div>
+        </div>
+        <div class="data-bar-legend">
+          <span class="data-bar-left">Instagram · 4,500</span>
+          <span class="data-bar-right">Everything else · 3,018,829</span>
+        </div>
+      </div>
+      <div class="data-numbers">
+        <div><div class="data-num">3,023,329</div><div class="data-num-lbl">Total installs</div></div>
+        <div><div class="data-num">4,500</div><div class="data-num-lbl">From Instagram bio</div></div>
+      </div>
+      <div class="data-callout">
+        Instagram is <strong>not driving acquisition</strong>. It's a brand asset. The volume strategy isn't producing returns — every hour spent on a 7th post per week is an hour not spent on what actually grows the product.
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="label">The positioning quadrant</div>
+    <h2 class="title">Where Equal sits — and why we lock here</h2>
+    <p class="lede">Two axes determine whether a brand should post volume content or premium content. Pricing tier (mass vs premium) and category status (known vs creating). Equal sits in the top-right — the same quadrant as Apple, Cred, Linear. None of them post 7 times a week.</p>
+
+    <div class="quad-container">
+      <div class="quad-y-label">Category status</div>
+      <div class="quad-grid">
+        <div class="quad-cell">
+          <div class="quad-label">Mass pricing · creating category</div>
+          <div class="quad-headline">Heavy education and community</div>
+          <div class="quad-brands">Duolingo · Cult.fit (early)</div>
+          <div class="quad-rhythm">Daily · education-heavy · community-led</div>
+        </div>
+        <div class="quad-cell featured">
+          <div class="equal-pin"><span class="equal-pin-dot"></span>Equal sits here</div>
+          <div class="quad-label">Premium pricing · creating category</div>
+          <div class="quad-headline">Less is more. Post sparsely, post well.</div>
+          <div class="quad-brands">Apple · Cred · Linear · Granola · Notion · Hermès</div>
+          <div class="quad-rhythm">4–8 posts per month · premium production · cultural argument-led</div>
+        </div>
+        <div class="quad-cell">
+          <div class="quad-label">Mass pricing · known category</div>
+          <div class="quad-headline">More is more. Win on visibility.</div>
+          <div class="quad-brands">Mamaearth · boAt · Sleepy Owl · Zomato</div>
+          <div class="quad-rhythm">Daily · scale plays · impulse purchases</div>
+        </div>
+        <div class="quad-cell">
+          <div class="quad-label">Premium pricing · known category</div>
+          <div class="quad-headline">Aesthetic-heavy, medium volume</div>
+          <div class="quad-brands">Hermès lifestyle · Apple seasonal</div>
+          <div class="quad-rhythm">2–3 per week · editorial style</div>
+        </div>
+      </div>
+      <div class="quad-xaxis">
+        <div class="quad-x-lbl">Mass pricing</div>
+        <div class="quad-x-lbl right-axis">Premium pricing</div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="insight-tag">Why this matters</div>
+      <div class="insight-text">Equal was running the bottom-left playbook (Mamaearth's) with a top-right product (Apple's). Premium pricing plus category creation means we can't compete on volume — and shouldn't try. The brands in our quadrant grew by posting less but building cultural authority. Our content strategy needs to match the quadrant we're actually in.</div>
+    </div>
+
+    <div class="asymmetry">
+      <div class="asym-tag">The asymmetry that locks us here</div>
+      <div class="asym-quote">Premium brands can <span class="accent">come down.</span> Mass brands <span class="accent">can't go up.</span></div>
+      <div class="asym-body">
+        We're starting at ₹249. If retention demands it, pricing can drop — Netflix has done it, Apple has done it with iPhone SE, Cred has done it through tiers. The brand stays intact because <strong>going from premium to accessible is natural; going from mass to premium breaks the brand</strong>.<br><br>
+        This is why we lock into the top-right quadrant now, even with pricing flexibility ahead. Build premium. Stay premium in voice and execution. If the market signals ask for accessible pricing later, we adapt the tier — not the brand.
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================== PART 2 =========================== -->
+  <div class="part-header">
+    <div class="label">Part 2 of 8 — Channel Priority</div>
+    <h1 class="title" style="margin-top: 4px;">What social is for, and which channels do which job</h1>
+    <p class="lede">If Instagram drives 0.15% of installs, social isn't acquisition. So what is it? This part answers three framework questions — why we're on social at all, who the page is for, and which channels do what. The answers determine everything that follows.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Section 1 — The role of social</div>
+    <h2 class="title">Three jobs, in order</h2>
+    <p class="lede">Social does three things — but the order matters. Trust gets built first. Awareness layers on top. Brand emerges from both, over time.</p>
+
+    <div class="role-funnel">
+      <div class="role-stage primary">
+        <div class="role-stage-num">
+          <span class="role-stage-tag">Primary</span>
+          <div class="role-stage-icon"><i class="ti ti-shield-check" aria-hidden="true"></i></div>
+        </div>
+        <div class="role-stage-content">
+          <div class="role-stage-headline">Trust &amp; validation for paid funnel arrivals</div>
+          <div class="role-stage-because">Someone hears about Equal from an ad, a podcast, or a friend. They check Instagram before installing. That validation step is what determines if they convert. Social closes loops — it doesn't open them.</div>
+        </div>
+      </div>
+      <div class="role-stage secondary">
+        <div class="role-stage-num">
+          <span class="role-stage-tag">Secondary</span>
+          <div class="role-stage-icon"><i class="ti ti-eye" aria-hidden="true"></i></div>
+        </div>
+        <div class="role-stage-content">
+          <div class="role-stage-headline">Awareness — for those who don't know the category</div>
+          <div class="role-stage-because">Cold audiences meet Equal for the first time scrolling Reels or Twitter. Awareness plants the seed — but only converts once the trust layer is established. It layers on top of trust, not before it.</div>
+        </div>
+      </div>
+      <div class="role-stage outcome">
+        <div class="role-stage-num">
+          <span class="role-stage-tag">Outcome</span>
+          <div class="role-stage-icon"><i class="ti ti-sparkles" aria-hidden="true"></i></div>
+        </div>
+        <div class="role-stage-content">
+          <div class="role-stage-headline">Brand — the cumulative effect of doing both well</div>
+          <div class="role-stage-because">Brand isn't a job the page does. It's what emerges when trust and awareness compound over 6–12 months. Every post that does either job contributes. No post needs to "build the brand" directly.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reasoning-mini">
+      <div class="reasoning-card">
+        <div class="reasoning-card-q">Why Trust first, not Awareness?</div>
+        <div class="reasoning-card-a">Awareness without trust is wasted reach. If the page reads inconsistent, the warm visitor doesn't convert. Trust is upstream.</div>
+      </div>
+      <div class="reasoning-card">
+        <div class="reasoning-card-q">Why isn't Brand its own job?</div>
+        <div class="reasoning-card-a">Brand is the outcome of every other job done well. Posts that try to be "branding" without doing one of the other jobs always feel hollow.</div>
+      </div>
+      <div class="reasoning-card">
+        <div class="reasoning-card-q">Why these three in this order?</div>
+        <div class="reasoning-card-a">Funnel reality. 99.85% of installs come from elsewhere. Those people arrive warm. The page must serve them first.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="label">Section 2 — Who the social audience is</div>
+    <h2 class="title">The audience on social is wider than our paying audience</h2>
+    <p class="lede">The people who'd actually pay ₹249/month are a subset of the people who follow Equal on social. Both audiences see the same content. The page has to speak to both without alienating either.</p>
+
+    <div class="audience-vis">
+      <div class="audience-circles">
+        <div class="circle-outer">
+          <div>
+            <div class="circle-num">~100M+</div>
+            <div class="circle-lbl">Social audience</div>
+          </div>
+          <div class="circle-inner">
+            <div class="circle-num">~10M</div>
+            <div class="circle-lbl">Product<br>audience</div>
+          </div>
+        </div>
+      </div>
+      <div class="audience-side">
+        <h3>The product audience</h3>
+        <p>Premium urban Indians who'd pay ₹249/month. Tier 1 metros, working professionals, founders, doctors, consultants. ~10M people.</p>
+        <h3>The social audience</h3>
+        <p>Broader urban India — Tier 1 and Tier 2. Students, junior professionals, aspirers. ~100M+ people, of whom the product audience is a small subset.</p>
+        <div class="principle">
+          <strong>The principle:</strong> content the product audience recognizes themselves in, and the broader social audience aspires to. A morning runner could be a founder or an aspiring marketer — both watch the same reel, both want to be that person.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="label">Section 3 — The channel priority stack</div>
+    <h2 class="title">Where acquisition happens, where trust gets built</h2>
+    <p class="lede">Channels organized by function. Tier 1 drives volume — performance ads (paid) and partnerships (organic, but distribution-driven). Tier 2 builds the trust that makes Tier 1 cheaper over time. Tier 3 compounds slowly.</p>
+
+    <div class="stack-architecture">
+
+      <div class="tier-band tier-1">
+        <div class="tier-band-header">
+          <span class="tier-band-num">Tier 1</span>
+          <span class="tier-band-title">Acquisition drivers</span>
+          <span class="tier-band-summary">~99% of install volume</span>
+        </div>
+        <div class="channel-tiles">
+          <div class="channel-tile">
+            <div class="channel-tile-icon"><i class="ti ti-target" aria-hidden="true"></i></div>
+            <div class="channel-tile-text">
+              <span class="channel-tile-name">Performance Ads</span>
+              <span class="channel-tile-role">Meta, Google, ASO · paid acquisition · 60–70% of installs</span>
+            </div>
+          </div>
+          <div class="channel-tile">
+            <div class="channel-tile-icon"><i class="ti ti-users" aria-hidden="true"></i></div>
+            <div class="channel-tile-text">
+              <span class="channel-tile-name">Partnerships</span>
+              <span class="channel-tile-role">Creators, podcasts, offline · organic acquisition · 20–30% of installs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tier-band tier-2">
+        <div class="tier-band-header">
+          <span class="tier-band-num">Tier 2</span>
+          <span class="tier-band-title">Trust builders</span>
+          <span class="tier-band-summary">Brand · validation · category authority</span>
+        </div>
+        <div class="channel-tiles">
+          <div class="channel-tile">
+            <div class="channel-tile-icon"><i class="ti ti-brand-instagram" aria-hidden="true"></i></div>
+            <div class="channel-tile-text">
+              <span class="channel-tile-name">Instagram</span>
+              <span class="channel-tile-role">Brand asset for warm visitors · premium-coded</span>
+            </div>
+          </div>
+          <div class="channel-tile">
+            <div class="channel-tile-icon"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></div>
+            <div class="channel-tile-text">
+              <span class="channel-tile-name">LinkedIn</span>
+              <span class="channel-tile-role">Founder voice — Keshav · premium audience</span>
+            </div>
+          </div>
+          <div class="channel-tile">
+            <div class="channel-tile-icon"><i class="ti ti-brand-x" aria-hidden="true"></i></div>
+            <div class="channel-tile-text">
+              <span class="channel-tile-name">Twitter / X</span>
+              <span class="channel-tile-role">AI category conversation · tech early adopters</span>
+            </div>
+          </div>
+          <div class="channel-tile">
+            <div class="channel-tile-icon"><i class="ti ti-brand-youtube" aria-hidden="true"></i></div>
+            <div class="channel-tile-text">
+              <span class="channel-tile-name">YouTube (owned)</span>
+              <span class="channel-tile-role">Long-form trust content · founder POVs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tier-band tier-3">
+        <div class="tier-band-header">
+          <span class="tier-band-num">Tier 3</span>
+          <span class="tier-band-title">Long-tail &amp; retention</span>
+          <span class="tier-band-summary">Slow-build · compounding</span>
+        </div>
+        <div class="channel-tiles">
+          <div class="channel-tile">
+            <div class="channel-tile-icon"><i class="ti ti-brand-reddit" aria-hidden="true"></i></div>
+            <div class="channel-tile-text">
+              <span class="channel-tile-name">Reddit</span>
+              <span class="channel-tile-role">Organic trust through real users</span>
+            </div>
+          </div>
+          <div class="channel-tile">
+            <div class="channel-tile-icon"><i class="ti ti-brand-whatsapp" aria-hidden="true"></i></div>
+            <div class="channel-tile-text">
+              <span class="channel-tile-name">WhatsApp</span>
+              <span class="channel-tile-role">Retention, referral, family safety community</span>
+            </div>
+          </div>
+          <div class="channel-tile">
+            <div class="channel-tile-icon"><i class="ti ti-message-question" aria-hidden="true"></i></div>
+            <div class="channel-tile-text">
+              <span class="channel-tile-name">Quora</span>
+              <span class="channel-tile-role">Long-tail SEO · answers that rank for years</span>
+            </div>
+          </div>
+          <div class="channel-tile">
+            <div class="channel-tile-icon"><i class="ti ti-news" aria-hidden="true"></i></div>
+            <div class="channel-tile-text">
+              <span class="channel-tile-name">PR / Press</span>
+              <span class="channel-tile-role">Earned authority through third-party coverage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skip-band">
+        <span class="skip-band-tag">Skip</span>
+        <span class="skip-band-items">Threads · Bluesky · Snapchat · Sharechat · Moj — wrong audience for premium positioning, or too early in India for our category.</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="label">Section 4 — What each channel owns</div>
+    <h2 class="title">Division of labor — no overlap</h2>
+    <p class="lede">Asking one channel to do everything is the most common social media mistake. Each channel in our stack has a job no other channel can do as well.</p>
+
+    <div class="ownership-grid">
+      <div class="ownership-card">
+        <div class="ownership-card-channel">Performance Ads</div>
+        <div class="ownership-card-owns">Acquisition</div>
+        <div class="ownership-card-detail">Direct installs at predictable CAC. The volume engine.</div>
+      </div>
+      <div class="ownership-card">
+        <div class="ownership-card-channel">Partnerships</div>
+        <div class="ownership-card-owns">Borrowed audience</div>
+        <div class="ownership-card-detail">Reach we don't yet have, validated by trusted voices.</div>
+      </div>
+      <div class="ownership-card">
+        <div class="ownership-card-channel">Instagram</div>
+        <div class="ownership-card-owns">Brand validation</div>
+        <div class="ownership-card-detail">Visual proof that Equal is real, premium, and credible.</div>
+      </div>
+      <div class="ownership-card">
+        <div class="ownership-card-channel">LinkedIn</div>
+        <div class="ownership-card-owns">Founder credibility</div>
+        <div class="ownership-card-detail">Keshav's voice. Slow-compounding professional trust.</div>
+      </div>
+      <div class="ownership-card">
+        <div class="ownership-card-channel">Twitter / X</div>
+        <div class="ownership-card-owns">Category conversation</div>
+        <div class="ownership-card-detail">Where AI early adopters discover and debate new tools.</div>
+      </div>
+      <div class="ownership-card">
+        <div class="ownership-card-channel">YouTube</div>
+        <div class="ownership-card-owns">Depth</div>
+        <div class="ownership-card-detail">Long-form content for users who want to understand before subscribing.</div>
+      </div>
+      <div class="ownership-card">
+        <div class="ownership-card-channel">Reddit</div>
+        <div class="ownership-card-owns">Honest signal</div>
+        <div class="ownership-card-detail">Authentic user mentions no other channel can fake.</div>
+      </div>
+      <div class="ownership-card">
+        <div class="ownership-card-channel">WhatsApp</div>
+        <div class="ownership-card-owns">Retention</div>
+        <div class="ownership-card-detail">Direct line to existing users. Safety community for families.</div>
+      </div>
+      <div class="ownership-card">
+        <div class="ownership-card-channel">PR / Press</div>
+        <div class="ownership-card-owns">Earned authority</div>
+        <div class="ownership-card-detail">Third-party validation no paid channel can buy.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="label">Section 5 — The locking insight</div>
+    <h2 class="title">Why the stack is built this way</h2>
+    <p class="lede">The temptation is to make every channel do everything. The discipline is to assign each one its specific job — and let the system work together.</p>
+
+    <div class="lock-insight">
+      <div class="lock-tag">The principle that locks the stack</div>
+      <div class="lock-quote">Performance and partnerships drive <span class="accent">volume.</span><br>Social channels build the <span class="accent">trust</span> that makes them work.</div>
+      <div class="lock-body">
+        Premium category-creators rarely lead with organic social. They lead with founder voice, podcasts, and word-of-mouth — surfaces that build credibility over years. Organic social comes along, but it doesn't carry the brand alone.<br><br>
+        For Equal, this means: <strong>protect the brand on Tier 2 channels, spend on acquisition through Tier 1.</strong> The two reinforce each other. Trust built on Instagram makes a paid ad convert better. A founder's LinkedIn voice makes a podcast partnership land harder. No channel works alone.
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================== PART 4 =========================== -->
+  <div class="part-header">
+    <div class="label">Part 4 of 8 — Content Pillars</div>
+    <h1 class="title" style="margin-top: 4px;">What we say — six pillars, one brand</h1>
+    <p class="lede">Every post Equal puts out belongs to exactly one of six pillars. The pillars are the system. They're how the team briefs, produces, and ships content without drifting. This part defines each pillar, what job it does, the formats it can take, and how often it appears.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Section 1 — The pillar system</div>
+    <h2 class="title">Six pillars at a glance</h2>
+    <p class="lede">Each pillar has a distinct job and a frequency band. Below: the pillar name, what it is in one line, one quick example so the team knows what it looks like, and how often it appears in the feed. Deep dives follow.</p>
+
+    <div class="pillar-overview">
+      <div class="pillar-overview-card p-life">
+        <div class="pillar-overview-num">Pillar 01</div>
+        <div class="pillar-overview-name">The Life</div>
+        <div class="pillar-overview-def">Aspirational scenes of premium urban life — phone deliberately absent.</div>
+        <div class="pillar-overview-example"><em>Example</em>Morning runner at 6 AM, phone in armband, doesn't break stride for incoming calls.</div>
+        <div class="pillar-overview-freq">~30% of feed</div>
+      </div>
+      <div class="pillar-overview-card p-argument">
+        <div class="pillar-overview-num">Pillar 02</div>
+        <div class="pillar-overview-name">The Argument</div>
+        <div class="pillar-overview-def">Worldview content — Equal's point of view delivered across multiple formats.</div>
+        <div class="pillar-overview-example"><em>Example</em>Creator reel: "I stopped picking up unknown numbers. Here's what changed."</div>
+        <div class="pillar-overview-freq">~25% of feed</div>
+      </div>
+      <div class="pillar-overview-card p-action">
+        <div class="pillar-overview-num">Pillar 03</div>
+        <div class="pillar-overview-name">Equal in Action</div>
+        <div class="pillar-overview-def">Real call moments — anonymized transcripts of Equal handling specific calls.</div>
+        <div class="pillar-overview-example"><em>Example</em>"Scammer asked for OTP. Equal asked for case reference. Scammer hung up."</div>
+        <div class="pillar-overview-freq">~15% of feed</div>
+      </div>
+      <div class="pillar-overview-card p-features">
+        <div class="pillar-overview-num">Pillar 04</div>
+        <div class="pillar-overview-name">Features</div>
+        <div class="pillar-overview-def">Premium product reveals — one capability per post, Apple-style restraint.</div>
+        <div class="pillar-overview-example"><em>Example</em>"Equal speaks 11 Indian languages." — list as hero on dark green background.</div>
+        <div class="pillar-overview-freq">~12% of feed</div>
+      </div>
+      <div class="pillar-overview-card p-stats">
+        <div class="pillar-overview-num">Pillar 05</div>
+        <div class="pillar-overview-name">Stats &amp; Scale</div>
+        <div class="pillar-overview-def">Proof Equal is real — numbers, maps, milestones, scale moments.</div>
+        <div class="pillar-overview-example"><em>Example</em>"3 million Indians. One AI on the line." — large numeral, India map markers.</div>
+        <div class="pillar-overview-freq">~10% of feed</div>
+      </div>
+      <div class="pillar-overview-card p-founder">
+        <div class="pillar-overview-num">Pillar 06</div>
+        <div class="pillar-overview-name">Founder Lens</div>
+        <div class="pillar-overview-def">Keshav's voice — why Equal exists, behind the build, sparingly used.</div>
+        <div class="pillar-overview-example"><em>Example</em>Keshav direct-to-camera: "Why I built Equal — a 60-second story."</div>
+        <div class="pillar-overview-freq">~8% of feed</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="label">Section 2 — Pillar deep dives</div>
+    <h2 class="title">Each pillar, in detail</h2>
+    <p class="lede">For each pillar — definition, the brand job it performs, the format vehicles it can take, three example posts, mood, and when it enters the launch arc.</p>
+
+    <!-- PILLAR 1: THE LIFE -->
+    <div class="pillar-deep p-life">
+      <div class="pillar-deep-header">
+        <div class="pillar-deep-name">01 · The Life</div>
+        <span class="pillar-deep-freq">~30% of feed</span>
+      </div>
+      <div class="pillar-deep-def">Aspirational scenes of premium urban life — moments where the phone is deliberately absent, ignored, or untouched. The lifestyle Equal enables.</div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">The job</div>
+        <div class="pillar-deep-job">Show the audience what life looks like when calls don't run it. The product audience recognizes themselves. The broader social audience aspires to it.</div>
+      </div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">Format vehicles</div>
+        <div class="format-grid">
+          <div class="format-chip"><div class="format-chip-name">Cinematic vignette</div><div class="format-chip-detail">30–60s film, restrained voiceover</div></div>
+          <div class="format-chip"><div class="format-chip-name">Single-frame photography</div><div class="format-chip-detail">One image, one caption</div></div>
+          <div class="format-chip"><div class="format-chip-name">Creator-shot lifestyle</div><div class="format-chip-detail">Indian creators showing their own untouched moments</div></div>
+          <div class="format-chip"><div class="format-chip-name">Slow reel sequences</div><div class="format-chip-detail">3–5 photo carousel, atmospheric</div></div>
+        </div>
+      </div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">Example posts</div>
+        <div class="examples-list">
+          <div class="example-row"><em>Morning runner</em>A runner at 6 AM on the seafront. AirPods in. Phone in armband. Doesn't break stride for the three calls that come in.</div>
+          <div class="example-row"><em>The Sunday brunch</em>Friends at a long table. Phones face-down. Eggs, mimosas, conversation. Caption: "8:47 PM. Three missed calls. Not one regret."</div>
+          <div class="example-row"><em>Saturday morning with kids</em>A parent making pancakes with their children. Phone in the bedroom. Kitchen full of laughter. The morning, intact.</div>
+        </div>
+      </div>
+
+      <div class="pillar-deep-meta">
+        <div class="meta-item"><strong>Mood</strong>Restrained, premium, calm, aspirational.</div>
+        <div class="meta-item"><strong>Enters in</strong>Phase 1 (Warming). Heaviest pillar throughout.</div>
+      </div>
+    </div>
+
+    <!-- PILLAR 2: THE ARGUMENT -->
+    <div class="pillar-deep p-argument">
+      <div class="pillar-deep-header">
+        <div class="pillar-deep-name">02 · The Argument</div>
+        <span class="pillar-deep-freq">~25% of feed</span>
+      </div>
+      <div class="pillar-deep-def">Equal's worldview, delivered in many vehicles. The argument that attention is finite and not every call deserves an answer — articulated through whichever format lands hardest for the audience.</div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">The job</div>
+        <div class="pillar-deep-job">Teach the audience what Equal stands for. Compound a point of view over months. This is the highest-traction pillar — paid creators, founder videos, and short films all live here.</div>
+      </div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">Format vehicles</div>
+        <div class="format-grid">
+          <div class="format-chip"><div class="format-chip-name">Influencer monologue</div><div class="format-chip-detail">Trusted creators delivering the argument in their voice</div></div>
+          <div class="format-chip"><div class="format-chip-name">Founder video</div><div class="format-chip-detail">Keshav direct to camera, 30–60s</div></div>
+          <div class="format-chip"><div class="format-chip-name">Short film</div><div class="format-chip-detail">90–180s hero piece, cinematic</div></div>
+          <div class="format-chip"><div class="format-chip-name">Quote card</div><div class="format-chip-detail">Words on a clean background, low-cost baseline</div></div>
+          <div class="format-chip"><div class="format-chip-name">Long-form essay</div><div class="format-chip-detail">LinkedIn / Twitter — 600–800 words from Keshav</div></div>
+          <div class="format-chip"><div class="format-chip-name">Cultural commentary</div><div class="format-chip-detail">Tied to moments — Diwali, exam season, marathon weekends</div></div>
+        </div>
+      </div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">Example posts</div>
+        <div class="examples-list">
+          <div class="example-row"><em>Influencer monologue</em>A trusted creator talks for 20 seconds about the day they stopped picking up unknown numbers — and what changed.</div>
+          <div class="example-row"><em>Quote card</em>"Picking up isn't always polite. Sometimes it's just trained." — black-on-lime, restrained type.</div>
+          <div class="example-row"><em>Cultural commentary</em>Diwali week — when family group calls multiply. A post about being reachable to the people who matter, not the noise.</div>
+        </div>
+      </div>
+
+      <div class="pillar-deep-meta">
+        <div class="meta-item"><strong>Mood</strong>Confident, opinionated, sometimes provocative. Always premium.</div>
+        <div class="meta-item"><strong>Enters in</strong>Phase 1 — heaviest. Lighter in Phase 2–3.</div>
+      </div>
+    </div>
+
+    <!-- PILLAR 3: EQUAL IN ACTION -->
+    <div class="pillar-deep p-action">
+      <div class="pillar-deep-header">
+        <div class="pillar-deep-name">03 · Equal in Action</div>
+        <span class="pillar-deep-freq">~15% of feed</span>
+      </div>
+      <div class="pillar-deep-def">Real moments where Equal handled a call. Anonymized transcripts, summary cards, and short narratives showing the product working in actual life.</div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">The job</div>
+        <div class="pillar-deep-job">Make Equal feel real, used, working. Transform invisible product moments into visible, shareable artifacts that warm visitors can read and trust.</div>
+      </div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">Format vehicles</div>
+        <div class="format-grid">
+          <div class="format-chip"><div class="format-chip-name">Transcript card</div><div class="format-chip-detail">Anonymized chat-style transcript with summary</div></div>
+          <div class="format-chip"><div class="format-chip-name">User testimonial video</div><div class="format-chip-detail">A real user telling their story (with permission)</div></div>
+          <div class="format-chip"><div class="format-chip-name">Story film</div><div class="format-chip-detail">Reenactment of a real call moment, anonymized</div></div>
+          <div class="format-chip"><div class="format-chip-name">Weekly digest visual</div><div class="format-chip-detail">"This week, Equal handled X for Y Indians"</div></div>
+        </div>
+      </div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">Example posts</div>
+        <div class="examples-list">
+          <div class="example-row"><em>Transcript card</em>"Scammer asked for an OTP. Equal asked for a case reference. Scammer hung up." — clean transcript visual.</div>
+          <div class="example-row"><em>Delivery moment</em>"Swiggy driver called for directions. Equal guided him to the apartment. You never paused your meeting."</div>
+          <div class="example-row"><em>Family moment</em>"Mom called during your interview. Equal told her you'd ring back at 4. She said the AI was very polite."</div>
+        </div>
+      </div>
+
+      <div class="pillar-deep-meta">
+        <div class="meta-item"><strong>Mood</strong>Functional, satisfying, slightly delightful. Honest.</div>
+        <div class="meta-item"><strong>Enters in</strong>Phase 2–3 (after launch). Pre-launch uses Android transcripts.</div>
+      </div>
+    </div>
+
+    <!-- PILLAR 4: FEATURES -->
+    <div class="pillar-deep p-features">
+      <div class="pillar-deep-header">
+        <div class="pillar-deep-name">04 · Features</div>
+        <span class="pillar-deep-freq">~12% of feed</span>
+      </div>
+      <div class="pillar-deep-def">Premium product reveals. One capability per post — Apple-style restraint. The product speaks for itself; copy stays minimal.</div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">The job</div>
+        <div class="pillar-deep-job">Make Equal feel like a real, considered product. Each feature gets full attention — never crammed into a "5 things you didn't know" carousel.</div>
+      </div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">Format vehicles</div>
+        <div class="format-grid">
+          <div class="format-chip"><div class="format-chip-name">Single-feature reveal</div><div class="format-chip-detail">One product visual, restrained type</div></div>
+          <div class="format-chip"><div class="format-chip-name">Hands-on demo</div><div class="format-chip-detail">Creator or founder walking through one feature</div></div>
+          <div class="format-chip"><div class="format-chip-name">Product film</div><div class="format-chip-detail">15–30s premium cinematic feature spotlight</div></div>
+          <div class="format-chip"><div class="format-chip-name">In-context proof</div><div class="format-chip-detail">Feature shown inside a real moment, not in isolation</div></div>
+        </div>
+      </div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">Example posts</div>
+        <div class="examples-list">
+          <div class="example-row"><em>11 languages reveal</em>Black background, lime accent. "Equal speaks 11 Indian languages." List as hero — type does the work.</div>
+          <div class="example-row"><em>Live transcript demo</em>15s creator clip — Equal handles a call, transcript appears in real time on the phone screen.</div>
+          <div class="example-row"><em>Snooze feature</em>"Equal handles everything for the next 2 hours." Single Snooze pill UI on a clean background.</div>
+        </div>
+      </div>
+
+      <div class="pillar-deep-meta">
+        <div class="meta-item"><strong>Mood</strong>Premium, confident, restrained. No exclamation marks.</div>
+        <div class="meta-item"><strong>Enters in</strong>Phase 2 (Android-framed) → Phase 3 (iOS launch).</div>
+      </div>
+    </div>
+
+    <!-- PILLAR 5: STATS & SCALE -->
+    <div class="pillar-deep p-stats">
+      <div class="pillar-deep-header">
+        <div class="pillar-deep-name">05 · Stats &amp; Scale</div>
+        <span class="pillar-deep-freq">~10% of feed</span>
+      </div>
+      <div class="pillar-deep-def">Proof Equal is real and growing. Numbers presented with restraint — not boasted, just stated. The numbers do the talking.</div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">The job</div>
+        <div class="pillar-deep-job">Convert warm visitors. When someone lands on the page from a paid ad, scale moments answer "is this real?" — they need to see proof.</div>
+      </div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">Format vehicles</div>
+        <div class="format-grid">
+          <div class="format-chip"><div class="format-chip-name">Number-as-hero</div><div class="format-chip-detail">Large numeral on clean background</div></div>
+          <div class="format-chip"><div class="format-chip-name">DAU map</div><div class="format-chip-detail">India visual with adoption markers</div></div>
+          <div class="format-chip"><div class="format-chip-name">Milestone post</div><div class="format-chip-detail">1M, 5M, 10M moments — when they happen</div></div>
+          <div class="format-chip"><div class="format-chip-name">Counter visual</div><div class="format-chip-detail">"Calls handled this week" — animated or static</div></div>
+        </div>
+      </div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">Example posts</div>
+        <div class="examples-list">
+          <div class="example-row"><em>Scale moment</em>"3 million Indians. One AI on the line." — large numeral, India map markers, restrained.</div>
+          <div class="example-row"><em>Calls handled</em>"47 million calls handled. Zero you had to take." — big numbers, no exclamation.</div>
+          <div class="example-row"><em>Reach moment</em>"Every state. Every region. Every language we ship." — clean infographic.</div>
+        </div>
+      </div>
+
+      <div class="pillar-deep-meta">
+        <div class="meta-item"><strong>Mood</strong>Restrained authority. Confidence through understatement.</div>
+        <div class="meta-item"><strong>Enters in</strong>Phase 1 (Android scale). Heavier in Phase 3.</div>
+      </div>
+    </div>
+
+    <!-- PILLAR 6: FOUNDER LENS -->
+    <div class="pillar-deep p-founder">
+      <div class="pillar-deep-header">
+        <div class="pillar-deep-name">06 · Founder Lens</div>
+        <span class="pillar-deep-freq">~8% of feed</span>
+      </div>
+      <div class="pillar-deep-def">Keshav's voice. Why Equal exists, what he sees, milestones in the build. Used sparingly — every appearance compounds.</div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">The job</div>
+        <div class="pillar-deep-job">Anchor the brand with a real human. Build founder credibility over months. On Instagram, sparingly. On LinkedIn, weekly — different cadence per channel.</div>
+      </div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">Format vehicles</div>
+        <div class="format-grid">
+          <div class="format-chip"><div class="format-chip-name">Founder photo + words</div><div class="format-chip-detail">Quiet portrait, short caption</div></div>
+          <div class="format-chip"><div class="format-chip-name">Direct-to-camera video</div><div class="format-chip-detail">30–60s Keshav speaking, low production</div></div>
+          <div class="format-chip"><div class="format-chip-name">LinkedIn long-form</div><div class="format-chip-detail">600–800 word posts, building in public</div></div>
+          <div class="format-chip"><div class="format-chip-name">Podcast clip</div><div class="format-chip-detail">15–30s clip from a Keshav podcast appearance</div></div>
+        </div>
+      </div>
+
+      <div class="pillar-deep-section">
+        <div class="pillar-deep-section-label">Example posts</div>
+        <div class="examples-list">
+          <div class="example-row"><em>Origin story</em>"Why I built Equal — a 60-second story." Direct video, restrained.</div>
+          <div class="example-row"><em>Learnings post</em>"What 10,000 spam calls taught us about India." Keshav essay, LinkedIn-first.</div>
+          <div class="example-row"><em>Milestone reflection</em>"Equal turns 1. Here's what 3M Indians have taught us." Founder photo + short caption.</div>
+        </div>
+      </div>
+
+      <div class="pillar-deep-meta">
+        <div class="meta-item"><strong>Mood</strong>Personal, restrained, credible. Never promotional.</div>
+        <div class="meta-item"><strong>Enters in</strong>All phases. Heavier on LinkedIn than Instagram.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="label">Section 3 — How the pillars combine in the feed</div>
+    <h2 class="title">The grid tells the story</h2>
+    <p class="lede">Pillars don't run in theme weeks. They interleave. Every six-post window of the grid mixes pillars so any visitor lands on a coherent brand statement — not a monolithic theme. Below is a sample 9-post window.</p>
+
+    <div class="feed-mosaic-wrap">
+      <div class="feed-mosaic">
+        <div class="feed-tile p-life">
+          <div class="feed-tile-label">The Life</div>
+          <div class="feed-tile-content">Morning runner</div>
+        </div>
+        <div class="feed-tile p-argument">
+          <div class="feed-tile-label">The Argument</div>
+          <div class="feed-tile-content">"Not all calls deserve your attention."</div>
+        </div>
+        <div class="feed-tile p-life">
+          <div class="feed-tile-label">The Life</div>
+          <div class="feed-tile-content">Sunday brunch, phones face-down</div>
+        </div>
+        <div class="feed-tile p-stats">
+          <div class="feed-tile-label">Stats &amp; Scale</div>
+          <div class="feed-tile-content">3M Indians on Equal</div>
+        </div>
+        <div class="feed-tile p-argument">
+          <div class="feed-tile-label">The Argument</div>
+          <div class="feed-tile-content">Creator monologue: "I stopped picking up..."</div>
+        </div>
+        <div class="feed-tile p-life">
+          <div class="feed-tile-label">The Life</div>
+          <div class="feed-tile-content">Saturday morning with kids</div>
+        </div>
+        <div class="feed-tile p-founder">
+          <div class="feed-tile-label">Founder Lens</div>
+          <div class="feed-tile-content">Keshav: Why I built Equal</div>
+        </div>
+        <div class="feed-tile p-argument">
+          <div class="feed-tile-label">The Argument</div>
+          <div class="feed-tile-content">"Your attention is the most expensive thing you own."</div>
+        </div>
+        <div class="feed-tile p-life">
+          <div class="feed-tile-label">The Life</div>
+          <div class="feed-tile-content">Coffee ritual, phone face-down</div>
+        </div>
+      </div>
+      <div class="feed-legend">
+        <div class="feed-legend-item"><div class="feed-legend-swatch" style="background: #5DCAA5;"></div>The Life</div>
+        <div class="feed-legend-item"><div class="feed-legend-swatch" style="background: #7F77DD;"></div>The Argument</div>
+        <div class="feed-legend-item"><div class="feed-legend-swatch" style="background: #378ADD;"></div>Equal in Action</div>
+        <div class="feed-legend-item"><div class="feed-legend-swatch" style="background: #EF9F27;"></div>Features</div>
+        <div class="feed-legend-item"><div class="feed-legend-swatch" style="background: #97C459;"></div>Stats &amp; Scale</div>
+        <div class="feed-legend-item"><div class="feed-legend-swatch" style="background: #888780;"></div>Founder Lens</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="label">Section 4 — The locking insight</div>
+    <h2 class="title">Why the pillar system works</h2>
+    <p class="lede">A pillar system isn't about restricting creativity. It's about giving every post a job — and trusting the combination to tell the brand story.</p>
+
+    <div class="lock-insight">
+      <div class="lock-tag">The discipline that holds the system</div>
+      <div class="lock-quote">Every post belongs to <span class="accent">one pillar.</span><br>No post tries to do <span class="accent">everything.</span></div>
+      <div class="lock-body">
+        The most common mistake brands make is asking a single post to be aspirational AND educational AND product AND credibility — all at once. The result: posts that say nothing strongly. <strong>Each pillar has its own job. Each post serves that job, fully.</strong><br><br>
+        The brand story emerges from the combination. A visitor scrolling the grid sees a runner (The Life), then a manifesto (The Argument), then a transcript (Equal in Action), then a number (Stats). Four posts, four pillars, one coherent worldview. That's the system working.
+      </div>
+    </div>
+  </div>
+
+  <div class="closer">
+    <span class="closer-text">End of Part 4 — Content Pillars</span>
+    <span class="closer-link">Next: The 3-Phase Arc →</span>
+  </div>
+
+</div>
+</body>
+</html>
